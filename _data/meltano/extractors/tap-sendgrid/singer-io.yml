@@ -6,7 +6,17 @@ namespace: tap_sendgrid
 variant: singer-io
 pip_url: tap-sendgrid
 repo: https://github.com/singer-io/tap-sendgrid
-settings: []
+settings:
+- name: api_key
+  label: API Key 
+  placeholder: Ex. 123456789012345
+  description: Your Sendgrid API key
+- name: start_date
+  label: Start Date
+  kind: date_iso8601
+  description: Determines how much historical data will be extracted. Please be aware
+    that the larger the time period and amount of data, the longer the initial extraction
+    can be expected to take.
 capabilities:
 - catalog
 - discover
